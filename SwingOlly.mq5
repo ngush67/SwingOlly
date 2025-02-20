@@ -3,7 +3,7 @@
 //|                                                      olson ngula |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "olson ngula" 
+#property copyright "olson ngula"  
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 //+------------------------------------------------------------------+
