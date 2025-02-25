@@ -1,4 +1,4 @@
-# SwingOlly - Advanced Forex Trading Expert Advisor  
+# SwingOlly - Advanced Forex Trading Expert Advisor   
 
 SwingOllyII is an advanced MetaTrader 5 (MT5) Expert Advisor (EA) designed to automate forex trading using a combination of technical indicators and robust risk management strategies. This EA integrates multiple signal filters and adaptive trailing stops to optimize trade execution and maximize profitability.
 
