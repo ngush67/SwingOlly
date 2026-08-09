@@ -1,0 +1,12 @@
+# MetaTrader compiled files and logs
+*.ex5
+*.log
+
+# MetaEditor files
+*.mqproj
+*.mpt
+*.set
+
+# Operating system files
+.DS_Store
+Thumbs.db
