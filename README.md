@@ -1,6 +1,6 @@
 # SwingOlly - Advanced Forex Trading Expert Advisor
 
-SwingOllyII is an advanced MetaTrader 5 (MT5) Expert Advisor (EA) designed to automate forex trading using a combination of technical indicators and robust risk management strategies. This EA integrates multiple signal filters and adaptive trailing stops to optimize trade execution and maximize profitability.
+SwingOlly is a MetaTrader 5 (MT5) Expert Advisor (EA) designed to automate forex trading using technical indicator filters and a moving-average trailing stop.
 
 ## Features.
 
@@ -12,16 +12,16 @@ SwingOllyII is an advanced MetaTrader 5 (MT5) Expert Advisor (EA) designed to au
 
 ## Strategy Overview.
 
-SwingOllyII identifies trading opportunities based on the combined signals of multiple indicators. The strategy confirms trends and momentum to open trades, manages risk with configurable stop loss and take profit levels, and protects profits using dynamic trailing stops.
+SwingOlly combines the signals of multiple indicators to identify trading opportunities. It uses configurable stop loss and take profit levels and a moving-average trailing stop.
 
 ## Installation.
 
 1. Open the MetaTrader 5 platform.
 2. Navigate to `File` > `Open Data Folder`.
-3. Place the `SwingOllyII.mq5` file in the `MQL5/Experts` directory.
+3. Place the `SwingOlly.mq5` file in the `MQL5/Experts` directory.
 4. Restart MetaTrader 5.
 5. In the Navigator panel, right-click on "Expert Advisors" and select "Refresh".
-6. Drag and drop `SwingOllyII` onto your desired chart.
+6. Drag and drop `SwingOlly` onto your desired chart.
 
 ## Input Parameters.
 
