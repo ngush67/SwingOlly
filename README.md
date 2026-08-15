@@ -23,32 +23,40 @@ SwingOlly combines the signals of multiple indicators to identify trading opport
 5. In the Navigator panel, right-click on "Expert Advisors" and select "Refresh".
 6. Drag and drop `SwingOlly` onto your desired chart.
 
-## Input Parameters.
+## Input Parameters
 
-### General Settings.
-- **Expert_Title:** Name of the EA instance.
-- **Expert_MagicNumber:** Unique identifier for trade management.
-- **Expert_EveryTick:** Enable/disable every tick mode.
+The table lists the EA's declared `input` parameters and their source defaults.
 
-### Signal Filters.
-- **Signal_ThresholdOpen:** Threshold for opening trades (0-100).
-- **Signal_ThresholdClose:** Threshold for closing trades (0-100).
-- **Signal_StopLevel:** Stop Loss in points.
-- **Signal_TakeLevel:** Take Profit in points.
-
-### Indicators Configuration.
-- **DEMA Settings:** Period, Shift, Applied Price, and Weight.
-- **SAR Settings:** Step, Maximum, and Weight.
-- **Stochastic Settings:** Period K, D, Slow, Applied Price, and Weight.
-- **RSI Settings:** Period and Weight.
-
-### Trailing Stop.
-- **Trailing_MA_Period:** Period for the Moving Average trailing stop.
-- **Trailing_MA_Method:** Method of averaging (SMA, EMA, etc.).
-
-### Money Management.
-- **Money_FixLot_Percent:** Percentage-based lot size.
-- **Money_FixLot_Lots:** Fixed lot size.
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `Expert_Title` | `string` | `"SwingOllyII"` | Document name passed as an expert input. |
+| `Signal_ThresholdOpen` | `int` | `10` | Signal threshold for opening trades. |
+| `Signal_ThresholdClose` | `int` | `10` | Signal threshold for closing trades. |
+| `Signal_PriceLevel` | `double` | `0.0` | Price level passed to the main signal. |
+| `Signal_StopLevel` | `double` | `50.0` | Stop loss level in points passed to the main signal. |
+| `Signal_TakeLevel` | `double` | `50.0` | Take profit level in points passed to the main signal. |
+| `Signal_Expiration` | `int` | `4` | Pending order expiration in bars passed to the main signal. |
+| `Signal_DEMA_PeriodMA` | `int` | `12` | DEMA averaging period. |
+| `Signal_DEMA_Shift` | `int` | `0` | DEMA time shift. |
+| `Signal_DEMA_Applied` | `ENUM_APPLIED_PRICE` | `PRICE_CLOSE` | Price series used by DEMA. |
+| `Signal_DEMA_Weight` | `double` | `1.0` | DEMA filter weight. |
+| `Signal_SAR_Step` | `double` | `0.02` | Parabolic SAR step. |
+| `Signal_SAR_Maximum` | `double` | `0.2` | Parabolic SAR maximum. |
+| `Signal_SAR_Weight` | `double` | `1.0` | Parabolic SAR filter weight. |
+| `Signal_Stoch_PeriodK` | `int` | `8` | Stochastic K period. |
+| `Signal_Stoch_PeriodD` | `int` | `3` | Stochastic D period. |
+| `Signal_Stoch_PeriodSlow` | `int` | `3` | Stochastic slowing period. |
+| `Signal_Stoch_Applied` | `ENUM_STO_PRICE` | `STO_LOWHIGH` | Price mode used by Stochastic. |
+| `Signal_Stoch_Weight` | `double` | `1.0` | Stochastic filter weight. |
+| `Signal_RSI_PeriodRSI` | `int` | `8` | RSI calculation period. |
+| `Signal_RSI_Applied` | `ENUM_APPLIED_PRICE` | `PRICE_CLOSE` | Price series used by RSI. |
+| `Signal_RSI_Weight` | `double` | `1.0` | RSI filter weight. |
+| `Trailing_MA_Period` | `int` | `12` | Moving average period used by the trailing object. |
+| `Trailing_MA_Shift` | `int` | `0` | Moving average shift used by the trailing object. |
+| `Trailing_MA_Method` | `ENUM_MA_METHOD` | `MODE_SMA` | Moving average method used by the trailing object. |
+| `Trailing_MA_Applied` | `ENUM_APPLIED_PRICE` | `PRICE_CLOSE` | Price series used by the trailing moving average. |
+| `Money_FixLot_Percent` | `double` | `10.0` | Percent value passed to the fixed-lot money object. |
+| `Money_FixLot_Lots` | `double` | `0.1` | Lot value passed to the fixed-lot money object. |
 
 ## Usage.
 
