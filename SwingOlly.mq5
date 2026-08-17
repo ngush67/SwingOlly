@@ -24,8 +24,8 @@
 //+------------------------------------------------------------------+
 //--- inputs for expert
 input string             Expert_Title           ="SwingOllyII"; // Document name
-ulong                    Expert_MagicNumber     =16170;         //
-bool                     Expert_EveryTick       =false;         //
+input ulong              Expert_MagicNumber     =16170;         // Magic number for this EA instance
+input bool               Expert_EveryTick       =false;         // Process every tick
 //--- inputs for main signal
 input int                Signal_ThresholdOpen   =10;            // Signal threshold value to open [0...100]
 input int                Signal_ThresholdClose  =10;            // Signal threshold value to close [0...100]

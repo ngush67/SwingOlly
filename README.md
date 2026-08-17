@@ -30,6 +30,8 @@ The table lists the EA's declared `input` parameters and their source defaults.
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | `Expert_Title` | `string` | `"SwingOllyII"` | Document name passed as an expert input. |
+| `Expert_MagicNumber` | `ulong` | `16170` | Magic number passed to the expert framework. |
+| `Expert_EveryTick` | `bool` | `false` | Tick-processing setting passed to the expert framework. |
 | `Signal_ThresholdOpen` | `int` | `10` | Signal threshold for opening trades. |
 | `Signal_ThresholdClose` | `int` | `10` | Signal threshold for closing trades. |
 | `Signal_PriceLevel` | `double` | `0.0` | Price level passed to the main signal. |
