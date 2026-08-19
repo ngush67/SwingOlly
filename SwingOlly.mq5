@@ -1,11 +1,12 @@
 //+------------------------------------------------------------------+
-//|                                                   SwingOllyII.mq5 |
-//|                                                      olson ngula |
+//|                                                    SwingOlly.mq5 |
+//|                                                     Olson Ngula |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "olson ngula"  
+#property copyright "Olson Ngula"
 #property link      "https://www.mql5.com"
-#property version   "1.00" 
+#property version   "1.00"
+#property description "SwingOlly MetaTrader 5 Expert Advisor"
 //+------------------------------------------------------------------+
 //| Include                                                          |
 //+------------------------------------------------------------------+
@@ -22,38 +23,49 @@
 //+------------------------------------------------------------------+
 //| Inputs                                                           |
 //+------------------------------------------------------------------+
-//--- inputs for expert
+input group "General settings"
 input string             Expert_Title           ="SwingOllyII"; // Document name
 input ulong              Expert_MagicNumber     =16170;         // Magic number for this EA instance
 input bool               Expert_EveryTick       =false;         // Process every tick
-//--- inputs for main signal
+
+input group "Main signal settings"
 input int                Signal_ThresholdOpen   =10;            // Signal threshold value to open [0...100]
 input int                Signal_ThresholdClose  =10;            // Signal threshold value to close [0...100]
 input double             Signal_PriceLevel      =0.0;           // Price level to execute a deal
 input double             Signal_StopLevel       =50.0;          // Stop Loss level (in points)
 input double             Signal_TakeLevel       =50.0;          // Take Profit level (in points)
 input int                Signal_Expiration      =4;             // Expiration of pending orders (in bars)
+
+input group "DEMA filter"
 input int                Signal_DEMA_PeriodMA   =12;            // Double Exponential Moving Average Period of averaging
 input int                Signal_DEMA_Shift      =0;             // Double Exponential Moving Average Time shift
 input ENUM_APPLIED_PRICE Signal_DEMA_Applied    =PRICE_CLOSE;   // Double Exponential Moving Average Prices series
 input double             Signal_DEMA_Weight     =1.0;           // Double Exponential Moving Average Weight [0...1.0]
+
+input group "Parabolic SAR filter"
 input double             Signal_SAR_Step        =0.02;          // Parabolic SAR(0.02,0.2) Speed increment
 input double             Signal_SAR_Maximum     =0.2;           // Parabolic SAR(0.02,0.2) Maximum rate
 input double             Signal_SAR_Weight      =1.0;           // Parabolic SAR(0.02,0.2) Weight [0...1.0]
+
+input group "Stochastic filter"
 input int                Signal_Stoch_PeriodK   =8;             // Stochastic(8,3,3,...) K-period
 input int                Signal_Stoch_PeriodD   =3;             // Stochastic(8,3,3,...) D-period
 input int                Signal_Stoch_PeriodSlow=3;             // Stochastic(8,3,3,...) Period of slowing
 input ENUM_STO_PRICE     Signal_Stoch_Applied   =STO_LOWHIGH;   // Stochastic(8,3,3,...) Prices to apply to
 input double             Signal_Stoch_Weight    =1.0;           // Stochastic(8,3,3,...) Weight [0...1.0]
+
+input group "RSI filter"
 input int                Signal_RSI_PeriodRSI   =8;             // Relative Strength Index(8,...) Period of calculation
 input ENUM_APPLIED_PRICE Signal_RSI_Applied     =PRICE_CLOSE;   // Relative Strength Index(8,...) Prices series
 input double             Signal_RSI_Weight      =1.0;           // Relative Strength Index(8,...) Weight [0...1.0]
-//--- inputs for trailing
+
+input group "Trailing stop"
 input int                Trailing_MA_Period     =12;            // Period of MA
 input int                Trailing_MA_Shift      =0;             // Shift of MA
 input ENUM_MA_METHOD     Trailing_MA_Method     =MODE_SMA;      // Method of averaging
 input ENUM_APPLIED_PRICE Trailing_MA_Applied    =PRICE_CLOSE;   // Prices series
-//--- inputs for money
+
+input group "Money management"
 input double             Money_FixLot_Percent   =10.0;          // Percent
 input double             Money_FixLot_Lots      =0.1;           // Fixed volume
 //+------------------------------------------------------------------+
