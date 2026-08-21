@@ -95,6 +95,7 @@ int OnInit()
       return(INIT_FAILED);
      }
 //---
+   // Configure shared signal thresholds and order levels before adding filters.
    ExtExpert.InitSignal(signal);
    signal.ThresholdOpen(Signal_ThresholdOpen);
    signal.ThresholdClose(Signal_ThresholdClose);
@@ -103,6 +104,7 @@ int OnInit()
    signal.TakeLevel(Signal_TakeLevel);
    signal.Expiration(Signal_Expiration);
 //--- Creating filter CSignalDEMA
+   // The four weighted indicators contribute to the expert's combined signal.
    CSignalDEMA *filter0=new CSignalDEMA;
    if(filter0==NULL)
      {
@@ -162,6 +164,7 @@ int OnInit()
    filter3.Applied(Signal_RSI_Applied);
    filter3.Weight(Signal_RSI_Weight);
 //--- Creation of trailing object
+   // The moving average trailing object manages stops for open positions.
    CTrailingMA *trailing=new CTrailingMA;
    if(trailing==NULL)
      {
@@ -184,6 +187,7 @@ int OnInit()
    trailing.Method(Trailing_MA_Method);
    trailing.Applied(Trailing_MA_Applied);
 //--- Creation of money object
+   // Configure the framework's fixed-lot money management object.
    CMoneyFixedLot *money=new CMoneyFixedLot;
    if(money==NULL)
      {
