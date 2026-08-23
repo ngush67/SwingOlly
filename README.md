@@ -67,12 +67,9 @@ The table lists the EA's declared `input` parameters and their source defaults.
 3. Ensure that automated trading is enabled in MT5 (`AutoTrading` button).
 4. Monitor the EA performance through the strategy tester or live trading.
 
-## Backtesting Performance.
+## Risk Disclaimer
 
-In backtests over January data, SwingOllyII achieved a profit of **$157**, demonstrating its ability to adapt to market conditions and effectively manage trades, outperforming simpler strategies.
-
-## Disclaimer.
-Trading forex involves significant risk and may not be suitable for all investors. Use SwingOllyII at your own risk. Past performance is not indicative of future results.
+Forex trading involves significant risk, and past performance does not guarantee future results. This EA is provided for educational and testing purposes and is not financial advice. Test it in the Strategy Tester and on a demo account before considering live use.
 
 ## License.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
