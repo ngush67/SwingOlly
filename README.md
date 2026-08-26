@@ -67,6 +67,18 @@ The table lists the EA's declared `input` parameters and their source defaults.
 3. Ensure that automated trading is enabled in MT5 (`AutoTrading` button).
 4. Monitor the EA performance through the strategy tester or live trading.
 
+## Strategy Tester
+
+1. Place `SwingOlly.mq5` in the terminal's `MQL5/Experts` directory.
+2. Open the file in MetaEditor and compile it. Confirm that compilation succeeds before testing.
+3. In MT5, open View > Strategy Tester (or press Ctrl+R) and select SwingOlly.
+4. Fill in the test market and period:
+   - Symbol: `[fill in]`
+   - Timeframe: `[fill in]`
+   - Date range: `[start date]` to `[end date]`
+5. Choose the modelling method and other tester options for your test. In the Inputs tab, review and set the EA parameters you want to evaluate; their source defaults are listed above. No recommended test values are specified here.
+6. Start the test and save the report together with the selected symbol, timeframe, date range, modelling method, and input values so the run can be reproduced.
+
 ## Risk Disclaimer
 
 Forex trading involves significant risk, and past performance does not guarantee future results. This EA is provided for educational and testing purposes and is not financial advice. Test it in the Strategy Tester and on a demo account before considering live use.
