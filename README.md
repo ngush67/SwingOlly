@@ -70,7 +70,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 **Olson Ngula**  
 [Visit My Profile](https://www.mql5.com)
-
 ## Contributions
 Contributions, issues, and feature requests are welcome! Feel free to open an issue or submit a pull request.
 
